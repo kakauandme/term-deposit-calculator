@@ -28,7 +28,12 @@ const balance = computed(() => {
       yearly_frequency = 1
       break
   }
-  return compoundInterest(amount.value, rate.value / 100, term.value, yearly_frequency).toFixed(0)
+
+  // interest rate in decimal form
+  const decimal_rate = rate.value / 100
+
+  // calculate and return final balance as integer
+  return compoundInterest(amount.value, decimal_rate, term.value, yearly_frequency).toFixed(0)
 })
 </script>
 
