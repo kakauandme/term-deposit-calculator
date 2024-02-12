@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-import { compoundInterest } from './index'
+import { compoundInterest } from '@/helpers/index'
 
 describe('compoundInterest', () => {
   it('Task example monthly', () => {
@@ -23,7 +23,7 @@ describe('compoundInterest', () => {
 
     expect(result).toBeCloseTo(10335, 0)
   })
-  it('Task example annualy', () => {
+  it('Task example annually', () => {
     const amount = 10000
     const rate = 0.011
     const term = 3

@@ -1,5 +1,5 @@
 /**
- * compoundInterest function calculates the compound interest over a given term.
+ * compoundInterest function calculates the compound interest over a given term. See https://en.wikipedia.org/wiki/Compound_interest for more information.
  *
  * @param {number} amount - The principal amount, the initial amount of money that is being compounded.
  * @param {number} rate - The annual interest rate (in decimal form, so 5% would be 0.05).
@@ -10,6 +10,7 @@
  */
 
 export const compoundInterest = (amount: number, rate: number, term: number, frequency: number) => {
+  // validate the input
   if (amount <= 0) {
     throw new Error('Principal has to be more than $0 ')
   }
@@ -26,9 +27,8 @@ export const compoundInterest = (amount: number, rate: number, term: number, fre
   try {
     return amount * Math.pow(1 + rate / frequency, frequency * term)
   } catch (error) {
-    // Handle the error here
+    // error handling
     console.error(error)
-    // Return a default value or rethrow the error
     throw error
   }
 }

@@ -10,7 +10,7 @@ defineProps<{
 let amount = ref(10000)
 let rate = ref(1.1)
 let term = ref(3)
-let frequency = ref('monthly')
+let frequency = ref('at_maturity')
 
 const balance = computed(() => {
   let yearly_frequency = 1 / term.value // default to maturnity
@@ -22,7 +22,7 @@ const balance = computed(() => {
     case 'quarterly':
       yearly_frequency = 4
       break
-    case 'annualy':
+    case 'annually':
       yearly_frequency = 1
       break
   }
@@ -43,8 +43,9 @@ const balance = computed(() => {
           class="form-control"
           id="amount"
           aria-label="Start deposit amount in Australian dollars"
-          min="0"
+          min="1"
           step="1"
+          required
           placeholder="Enter amount ..."
         />
       </div>
@@ -58,9 +59,11 @@ const balance = computed(() => {
           class="form-control"
           id="rate"
           aria-label="Interest rate in percent"
-          min="0"
-          step="0.01"
+          min="0.1"
+          step="0.1"
           max="100"
+          required
+          placeholder="Enter interest rate ..."
         />
         <span class="input-group-text">%</span>
       </div>
@@ -99,14 +102,14 @@ const balance = computed(() => {
 
         <input
           v-model="frequency"
-          value="annualy"
+          value="annually"
           type="radio"
           class="btn-check"
           name="frequency"
-          id="frequency_annualy"
+          id="frequency_annually"
           autocomplete="off"
         />
-        <label class="btn btn-outline-primary" for="frequency_annualy">Annualy</label>
+        <label class="btn btn-outline-primary" for="frequency_annually">Annually</label>
 
         <input
           v-model="frequency"
