@@ -25,9 +25,11 @@ After, I've created simple form in a [src/components/TermDepositCalculator.vue](
 
 This was a quick prototype and I timed myself to ~2h limit. To finish this, I would:
 
+0. Add error handling to the form
 1. Increase test coverage
 2. Add e2e tests
 3. Tweak layout to make it responsive
+4. etc.
 
 ## Setup
 
@@ -35,7 +37,7 @@ This was a quick prototype and I timed myself to ~2h limit. To finish this, I wo
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Initialisation
+### Initialisation
 
 ```sh
 npm install
@@ -75,13 +77,15 @@ npm run build
 npm run test:e2e
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Code quality
+
+Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
 ```
 
-and to format run
+and to format with [Prettier](https://prettier.io/) run
 
 ```sh
 npm run format
