@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import TermDepositCalculator from './components/TermDepositCalculator.vue'
 </script>
 
 <template>
   <main class="container">
-    <HelloWorld msg="You did it!" />
+    <TermDepositCalculator msg="Term deposit calculator" />
   </main>
 </template>
 
