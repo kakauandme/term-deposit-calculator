@@ -7,14 +7,17 @@ defineProps<{
   msg: string
 }>()
 
+// set initial values
 let amount = ref(10000)
 let rate = ref(1.1)
 let term = ref(3)
 let frequency = ref('at_maturity')
 
 const balance = computed(() => {
-  let yearly_frequency = 1 / term.value // default to maturnity
+  // frequency as the number of times the interest is compounded per year
+  let yearly_frequency = 1 / term.value // default to maturity
 
+ 
   switch (frequency.value) {
     case 'monthly':
       yearly_frequency = 12
