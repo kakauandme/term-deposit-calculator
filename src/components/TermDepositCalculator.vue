@@ -17,7 +17,6 @@ const balance = computed(() => {
   // frequency as the number of times the interest is compounded per year
   let yearly_frequency = 1 / term.value // default to maturity
 
- 
   switch (frequency.value) {
     case 'monthly':
       yearly_frequency = 12
