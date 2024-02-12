@@ -13,9 +13,11 @@ And produces as output: Final balance (e.g. $10,330 on the above inputs, interes
 
 It was fun! I've started with a [Compound interest Wikipedia article](https://en.wikipedia.org/wiki/Compound_interest) and tested the formula in a [Google sheet](https://docs.google.com/spreadsheets/d/1MhdWg2Seyuq1Ad4ekDuR-t9HwyG9ezGVJFci_Io88_0/edit?usp=sharing). It worked like charm.
 
-Then I've spun up a SPA with [Vite](https://vitejs.dev/) and [Vue 3](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/). Added a helper `compoundInterest(...)` function that takes the inputs and returns the final balance into [src/helpers/index.ts](https://github.com/kakauandme/term-deposit-calculator/blob/main/src/helpers/index.ts) file. I've added a few unit tests in [src/helpers/index.test.ts](https://github.com/kakauandme/term-deposit-calculator/blob/main/src/helpers/index.test.ts) file as well.
+Then I've spun up a SPA with [Vite](https://vitejs.dev/) and [Vue 3](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/). 
 
-After, I've created simple form in a [src/components/TermDepositCalculator.vue](https://github.com/kakauandme/term-deposit-calculator/blob/main/src/components/TermDepositCalculator.vue) component that validates the inputs and calls the `compoundInterest(...)` helper to display the final balance.
+When a boilerplate Vue project was ready, I added a helper `compoundInterest(...)` function that takes the inputs and returns the final balance into [src/helpers/index.ts](https://github.com/kakauandme/term-deposit-calculator/blob/main/src/helpers/index.ts) file. I've added a few unit tests in [src/helpers/index.test.ts](https://github.com/kakauandme/term-deposit-calculator/blob/main/src/helpers/index.test.ts) file as well.
+
+After, I've created a simple form in a [src/components/TermDepositCalculator.vue](https://github.com/kakauandme/term-deposit-calculator/blob/main/src/components/TermDepositCalculator.vue) component that validates the inputs and calls the `compoundInterest(...)` helper to display the final balance as a computed property.
 
 ### Screenshot
 
