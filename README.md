@@ -32,7 +32,8 @@ This was a quick prototype, and I timed myself to the ~2h limit. To finish this,
 1. Increase test coverage
 2. Add e2e tests
 3. Tweak layout to make it responsive
-4. etc.
+4. Format $ numbers with commas
+5. etc.
 
 ## Setup
 
